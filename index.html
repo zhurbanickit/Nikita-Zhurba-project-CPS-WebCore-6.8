@@ -21,17 +21,42 @@
           class="menu__items checkstatus"
         />
       </div>
-      <div class="services" text="Услуги и сервисы">
-        <button class="services_button">Ремонтируемые бренды</button>
-        <button class="services_button">Ремонтируемые устройства</button>
-        <button class="services_button">Цены на услуги</button>
-        <button class="services_button">Адреса сервисных центров</button>
-        <button class="services_button">Специальные цены</button>
-        <button class="services_button">Отзывы</button>
+      <div class="services" text="">
+        <div class="services__nav">
+          <button class="services__left custom_font">Услуги и сервисы</button>
+          <button class="services__right">
+            Оставить заявку<img src="/img/repair.png" />
+          </button>
+          <button class="services__right">
+            Статус ремонта <img src="/img/checkstatus.png" />
+          </button>
+        </div>
+        <div class="services__wrapper">
+          <button class="services__button repaired_deviсes">
+            Ремонтируемые устройства
+          </button>
+          <button class="services__button add_services">
+            Дополнительные услуги
+          </button>
+          <button class="services__button repaired_brands">
+            Ремонтируемые бренды
+          </button>
+
+          <button class="services__button prices_options">
+            Цены на услуги
+          </button>
+          <button class="services__button adress_centers">
+            Адреса сервисных центров
+          </button>
+          <button class="services__button special_prices">
+            Специальные цены
+          </button>
+        </div>
+        <button class="services__button reviews">Отзывы</button>
       </div>
       <div class="about">
         <div class="about__text" text="">
-          <div class="about__main">
+          <div class="about__main custom_font_medium">
             Мы являемся авторизованным сервисным центром по ремонту техники
             Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с
             официальной гарантией производителя. Мы успешно работаем с 1992 года
@@ -41,7 +66,9 @@
             близким.
           </div>
 
-          <button class="about_button"></button>
+          <button class="about_button">
+            <img src="/img/expand.png" type="image/png" /> Читать далее
+          </button>
         </div>
         <div class="about__img">
           <img src="/img/Picture-Copy.png" alt="" class="about__items" />
