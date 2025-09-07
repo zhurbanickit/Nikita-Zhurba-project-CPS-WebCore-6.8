@@ -1,21 +1,35 @@
 body {
   box-sizing: border-box;
   font-family: "TTLakes", "TTLakes Medium", "TTLakes Bold";
+  font-size: 16px;
+  /* margin-right: 10px; */
 }
 
 @font-face {
   font-family: "TTLakes";
-  src: url(/font/TTLakesCompressed-Black.ttf);
+  src: url(/font/TTLakesCompressed-Bold.ttf) format("ttf");
+  font-weight: bold;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: "TTLakes Medium";
+  font-family: "TTLakes";
   src: url(/font/TTLakes-Medium.ttf) format("ttf");
+  font-weight: 500;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: "TTLakes Bold";
-  src: url(/font/TTLakesCondensed-Bold.ttf) format("ttf");
+  font-family: "TTLakes";
+  src: url(/font/TTLakes-Regular.ttf) format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TTLakes";
+  src: url(/font/TTLakes-DemiBold.ttf) format("ttf");
+  font-weight: 600;
+  font-style: normal;
 }
 
 .custom_font {
@@ -23,321 +37,272 @@ body {
 }
 
 .custom_font_medium {
-  font-family: "TTLakes Medium";
-}
-.custom_font_bold {
-  font-family: "TTLakes Bold";
+  font-family: "TTLakes";
 }
 
-@media only screen and (max-width: 320px) {
-  .menu {
-  }
+.menu {
+  background-color: #fff;
+}
 
-  .menu__icons {
-    margin: 16px;
+.menu__icons {
+  margin: 16px;
 
-    background-color: #ffffff;
-    display: flex;
-    justify-content: space-between;
-  }
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu__items {
+  display: flex;
 
-  .menu__items {
-  }
+  align-items: center;
+  /* margin: 10px; */
+}
+.menu__items:nth-child(3) {
+  margin-left: auto;
+}
 
-  .burger {
-    max-width: 40px;
-    max-height: 40px;
-  }
+.burger {
+  display: flex;
+  justify-self: flex-start;
+}
 
-  .group {
-    max-height: 50px;
-  }
+.group {
+  display: flex;
+  justify-self: flex-start;
+  min-width: 96.5px;
+  min-height: 50.8px;
+}
 
-  .call {
-    display: none;
-  }
+.call {
+  display: none;
+}
 
-  .chat {
-    display: none;
-  }
+.chat {
+  display: none;
+}
 
-  .profile {
-    display: none;
-  }
+.profile {
+  display: none;
+}
 
-  .repair {
-    max-width: 40px;
-    max-height: 40px;
-    border-left: 2px solid #eaeaea;
-    border-right: none;
-    padding-left: 10px;
-  }
+.repair {
+  border-left: 2px solid #eaeaea;
+  border-right: none;
+  padding-left: 10px;
+}
 
-  .checkstatus {
-    max-width: 40px;
-    max-height: 40px;
-  }
+.checkstatus {
+}
 
-  .services {
-    /* border: 0 5px 0 0 #41f6d7; */
-    overflow: auto;
-  }
+.services {
+  /* border: 0 5px 0 0 #41f6d7; */
+  overflow: hidden;
+  background-color: #f8f8f8;
+}
 
-  .services__nav {
-  }
+.services__nav {
+}
 
-  .services__left {
-    padding: 0 0 0 16px;
-    font-weight: 400;
-    font-size: 28px;
-    border-top: none;
-    border-left: #41f6d7 8px solid;
-    border-right: none;
-    border-bottom: none;
-    background: none;
-  }
+.services__left {
+  padding: 0 0 0 16px;
+  font-weight: 700;
+  font-size: 28px;
+  border-top: none;
+  border-left: #41f6d7 6px solid;
+  border-right: none;
+  border-bottom: none;
+  background: none;
+  font-family: "TTLakes";
+}
 
-  .services__right {
-    display: none;
-  }
+.services__right {
+  background-color: #f8f8f8;
+  display: none;
+}
 
-  .services__wrapper {
-    display: flex;
-    /* gap: 10px; */
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 16px;
-    padding: 3px;
-  }
+.services__wrapper {
+  display: flex;
+  /* gap: 10px; */
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 16px;
+  padding: 3px;
+  background-color: #f8f8f8;
+}
 
-  .services__button {
-    /* display: flex; */
-    color: #7e7e82;
-    font-family: "TTLakes";
-    /* font-weight: 500; */
-    font-size: 16px;
-    /* max-width: 220px; */
-    border: none;
-    background: none;
-  }
+.services__button {
+  display: flex;
+  text-wrap: nowrap;
+  color: #7e7e82;
+  font-family: "TTLakes";
+  font-size: 16px;
+  border: none;
+  background: none;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  font-weight: 500;
+  width: 246px;
+  height: 40px;
+  padding: 5px 5px 5px 12px;
+}
 
-  .services__button:first-child {
-  }
+.services__button:first-child {
+}
 
-  .services__button:hover {
-    background-color: #f8f8f8;
-    border: #b8ffec 1px solid;
-    border-radius: 6px;
-  }
+.services__button:hover {
+  background-color: #fff;
+  border: #b8ffec 2px solid;
+  border-radius: 6px;
+}
 
-  .repaired_deviсes {
-    min-width: 220px;
-  }
-  .add_services {
-  }
-  .repaired_brands {
-    display: none;
-  }
-  .prices_options {
-    display: none;
-  }
-  .adress_centers {
-    display: none;
-  }
-  .special_prices {
-    display: none;
-  }
-  .reviews {
-    margin: 16px;
-    display: none;
-    padding: 0;
-  }
+.repaired_deviсes {
+  min-width: 220px;
+}
+.add_services {
+}
+.repaired_brands {
+  display: none;
+}
+.prices_options {
+  display: none;
+}
+.adress_centers {
+  display: none;
+}
+.special_prices {
+  display: none;
+}
+.reviews {
+  margin: 16px;
+  display: none;
+  padding: 0;
+}
 
-  .about {
-  }
+.about {
+  background-color: #f8f8f8;
+}
 
-  .about__text {
-  }
+.about__text {
+  font-family: "TTLakes";
+  font-size: 14px;
+  font-weight: 400;
+  color: #1b1c21;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  /* max-width: 288px;
+  max-height: 90px; */
+}
 
-  .about__main {
-    font-family: "TTLakes Bold";
-    font-size: 14px;
-    /* display: flex;
+.about__main {
+  /* display: flex;
     text-wrap: wrap; */
-    max-width: 288px;
-    max-height: 90px;
-    top: 240px;
-    margin-left: 16px;
-  }
-
-  .about_button {
-    /* display: flex;
-    justify-content: center; */
-    border: none;
-    background: #f8f8f8;
-    margin-left: 16px;
-  }
-
-  .about__img {
-  }
-
-  .about__items {
-    /* border-radius: 6px; */
-    max-height: 240px;
-  }
+  /* max-width: 288px;
+    max-height: 90px; */
+  top: 240px;
+  margin-left: 16px;
 }
 
-@media only screen and (max-width: 768px) {
+.about__medium {
+  display: none;
+}
+
+.about__finish {
+  display: none;
+}
+
+.about_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background: #f8f8f8;
+  margin: 0 0 10px 5px;
+  padding: 10px;
+}
+
+.about__img {
+}
+
+.about__items {
+  /* border-radius: 6px; */
+  max-height: 240px;
+}
+
+@media (min-width: 430px) and (max-width: 768px) {
   .menu {
   }
-
   .menu__icons {
-    margin: 16px;
-
-    background-color: #ffffff;
-    display: flex;
-    justify-content: space-between;
   }
-
   .menu__items {
+    margin: 10px;
   }
-
   .burger {
     border-right: 2px solid #eaeaea;
+    border-left: none;
     padding-right: 10px;
-    max-width: 40px;
-    max-height: 40px;
   }
-
   .group {
-    max-height: 50px;
   }
-
   .call {
+    display: flex;
   }
-
   .chat {
+    display: flex;
   }
-
   .profile {
+    display: flex;
   }
-
   .repair {
-    max-width: 40px;
-    max-height: 40px;
-    border-left: 2px solid #eaeaea;
-    border-right: none;
-    padding-left: 10px;
   }
-
   .checkstatus {
-    max-width: 40px;
-    max-height: 40px;
   }
-
   .services {
-    /* border: 0 5px 0 0 #41f6d7; */
-    overflow: auto;
   }
-
   .services__nav {
   }
-
   .services__left {
-    padding: 0 0 0 16px;
-    font-weight: 400;
-    font-size: 28px;
-    border-top: none;
-    border-left: #41f6d7 8px solid;
-    border-right: none;
-    border-bottom: none;
-    background: none;
   }
-
+  .custom_font {
+  }
   .services__right {
-    display: none;
   }
-
   .services__wrapper {
-    display: flex;
-    /* gap: 10px; */
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 16px;
-    padding: 3px;
   }
-
   .services__button {
-    /* display: flex; */
-    color: #7e7e82;
-    font-family: "TTLakes";
-    /* font-weight: 500; */
-    font-size: 16px;
-    /* max-width: 220px; */
-    border: none;
-    background: none;
   }
-
-  .services__button:first-child {
-  }
-
-  .services__button:hover {
-    background-color: #f8f8f8;
-    border: #b8ffec 1px solid;
-    border-radius: 6px;
-  }
-
   .repaired_deviсes {
-    min-width: 220px;
   }
   .add_services {
   }
   .repaired_brands {
-    display: none;
   }
   .prices_options {
+    display: flex;
   }
   .adress_centers {
-    display: none;
   }
   .special_prices {
+    display: flex;
   }
   .reviews {
-    margin: 16px;
-    display: none;
-    padding: 0;
   }
-
   .about {
   }
-
   .about__text {
   }
-
   .about__main {
-    font-family: "TTLakes Bold";
-    font-size: 14px;
-    /* display: flex;
-    text-wrap: wrap; */
-    max-width: 288px;
-    max-height: 90px;
-    top: 240px;
-    margin-left: 16px;
   }
-
+  .custom_font_medium {
+  }
+  .about__medium {
+  }
+  .about__finish {
+  }
   .about_button {
-    /* display: flex;
-    justify-content: center; */
-    border: none;
-    background: #f8f8f8;
-    margin-left: 16px;
   }
-
   .about__img {
   }
-
   .about__items {
-    /* border-radius: 6px; */
-    max-height: 240px;
   }
 }
