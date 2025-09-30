@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CPS</title>
     <link rel="stylesheet" href="/index.css" />
+    <link rel="stylesheet" href="/font.css" />
   </head>
   <body>
     <nav class="menu">
@@ -24,12 +25,16 @@
       <div class="services" text="">
         <div class="services__nav">
           <button class="services__left custom_font">Услуги и сервисы</button>
-          <button class="services__right">
-            Оставить заявку<img src="/img/repair.png" />
-          </button>
-          <button class="services__right">
-            Статус ремонта <img src="/img/checkstatus.png" />
-          </button>
+          <!--TODO: НАЗНИЧИТ КЛАСС ДИВУ , -->
+          <div class="services_div">
+            <button class="services__right">
+              Оставить заявку<img src="/img/repair.png" class="services__img" />
+            </button>
+            <button class="services__right">
+              Статус ремонта
+              <img src="/img/checkstatus.png" class="services__img" />
+            </button>
+          </div>
         </div>
         <div class="services__wrapper">
           <button class="services__button repaired_deviсes">
@@ -54,29 +59,32 @@
         </div>
         <button class="services__button reviews">Отзывы</button>
       </div>
-      <div class="about">
-        <div class="about__text" text="">
-          <div class="about__main custom_font_medium">
-            Мы являемся авторизованным сервисным центром по ремонту техники
-            Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с
-            официальной гарантией производителя.
-          </div>
-          <div class="about__medium custom_font">
-            Мы успешно работаем с 1992 года и заслужили репутацию надежного
-            партнера
-            <div class="about__finish custom_font">
-              , что подтверждает большое количество постоянных клиентов. Мы
-              гордимся тем, что к нам обращаются по рекомендациям и, в свою
+      <div class="about_div">
+        <div class="about">
+          <div class="about__text" text="">
+            <div class="about__main">
+              Мы являемся авторизованным сервисным центром по ремонту техники
+              Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с
+              официальной гарантией производителя.
+            </div>
+            <div class="about__medium">
+              Мы успешно работаем с 1992 года и заслужили репутацию надежного
+              партнера
+            </div>
+            <div class="about__finish">
+              Мы успешно работаем с 1992 года и заслужили репутацию надежного
+              партнера, что подтверждает большое количество постоянных клиентов.
+              Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою
               очередь, советуют нас родным и близким.
             </div>
-          </div>
 
-          <button class="about_button">
-            <img src="/img/expand.png" type="image/png" /> Читать далее
-          </button>
-        </div>
-        <div class="about__img">
-          <img src="/img/Picture-Copy.png" alt="" class="about__items" />
+            <button class="about_button">
+              <img src="/img/expand.png" type="image/png" /> Читать далее
+            </button>
+          </div>
+          <div class="about__img">
+            <img src="/img/Picture-Copy.png" alt="" class="about__items" />
+          </div>
         </div>
       </div>
     </nav>

@@ -1,44 +1,21 @@
 body {
   box-sizing: border-box;
-  font-family: "TTLakes", "TTLakes Medium", "TTLakes Bold";
+  font-family: "TTLakes";
   font-size: 16px;
   /* margin-right: 10px; */
 }
 
-@font-face {
-  font-family: "TTLakes";
-  src: url(/font/TTLakesCompressed-Bold.ttf) format("ttf");
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "TTLakes";
-  src: url(/font/TTLakes-Medium.ttf) format("ttf");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "TTLakes";
-  src: url(/font/TTLakes-Regular.ttf) format("ttf");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "TTLakes";
-  src: url(/font/TTLakes-DemiBold.ttf) format("ttf");
-  font-weight: 600;
-  font-style: normal;
-}
+/* подключить стали чере стайл шит
+текст и картинку в один див
+ */
 
 .custom_font {
   font-family: "TTLakes";
 }
 
-.custom_font_medium {
+/* .custom_font_medium {
   font-family: "TTLakes";
-}
+} */
 
 .menu {
   background-color: #fff;
@@ -102,6 +79,7 @@ body {
 }
 
 .services__nav {
+  margin-top: 32px;
 }
 
 .services__left {
@@ -119,16 +97,17 @@ body {
 .services__right {
   background-color: #f8f8f8;
   display: none;
+  border: none;
 }
 
 .services__wrapper {
   display: flex;
   /* gap: 10px; */
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-left: 16px;
+  margin: 20px 20px 0 16px;
   padding: 3px;
   background-color: #f8f8f8;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .services__button {
@@ -175,12 +154,15 @@ body {
 }
 .reviews {
   margin: 16px;
+  padding: 0 0 0 16px;
   display: none;
-  padding: 0;
 }
 
 .about {
   background-color: #f8f8f8;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .about__text {
@@ -188,10 +170,10 @@ body {
   font-size: 14px;
   font-weight: 400;
   color: #1b1c21;
-  line-height: 18px;
+  line-height: 20px;
   letter-spacing: 0.2px;
-  /* max-width: 288px;
-  max-height: 90px; */
+  max-width: 288px;
+  /* max-height: 90px; */
 }
 
 .about__main {
@@ -200,15 +182,18 @@ body {
   /* max-width: 288px;
     max-height: 90px; */
   top: 240px;
-  margin-left: 16px;
+  margin: 16px 16px 0 16px;
 }
 
 .about__medium {
   display: none;
+  margin: 16px 16px 0 16px;
 }
 
 .about__finish {
   display: none;
+  margin-left: 16px;
+  margin-top: 20px;
 }
 
 .about_button {
@@ -222,18 +207,14 @@ body {
 }
 
 .about__img {
+  margin: 0 16px 16px 26px;
 }
 
 .about__items {
-  /* border-radius: 6px; */
-  max-height: 240px;
+  /* max-height: 240px; */
 }
 
 @media (min-width: 430px) and (max-width: 768px) {
-  .menu {
-  }
-  .menu__icons {
-  }
   .menu__items {
     margin: 10px;
   }
@@ -253,56 +234,267 @@ body {
   .profile {
     display: flex;
   }
-  .repair {
-  }
-  .checkstatus {
-  }
-  .services {
-  }
-  .services__nav {
-  }
-  .services__left {
-  }
-  .custom_font {
-  }
-  .services__right {
-  }
-  .services__wrapper {
-  }
-  .services__button {
-  }
-  .repaired_deviсes {
-  }
-  .add_services {
-  }
-  .repaired_brands {
-  }
+
   .prices_options {
     display: flex;
   }
-  .adress_centers {
-  }
+
   .special_prices {
     display: flex;
   }
   .reviews {
   }
   .about {
+    display: flex;
+    max-width: 100%;
+    justify-content: space-between;
+    flex-direction: row;
   }
   .about__text {
+    display: flex;
+    float: left;
+    /* width: 312px; */
+    max-width: 50%;
+    height: auto;
+    justify-content: flex-start;
+    align-items: column;
+    flex-wrap: wrap;
   }
-  .about__main {
-  }
-  .custom_font_medium {
-  }
+
   .about__medium {
+    display: flex;
+    width: 312px;
   }
   .about__finish {
   }
   .about_button {
+    display: flex;
+    margin: 0 10px 32px 5px;
   }
   .about__img {
+    display: flex;
+    float: right;
+    margin: 16px;
+    height: auto;
+    max-width: 50%;
+
+    /* overflow: hidden; */
   }
   .about__items {
+    border-radius: 6px;
+    margin: 16px;
+    /* max-width: 360px;
+    max-height: 208px; */
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1120px) {
+  .menu__icons {
+    display: none;
+  }
+  .menu__items {
+    margin: 10px;
+  }
+
+  .call {
+    display: flex;
+  }
+  .chat {
+    display: flex;
+  }
+  .profile {
+    display: flex;
+  }
+  .services_div {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .services__nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .services__nav:nth-child(2) {
+    justify-content: flex-end;
+  }
+
+  .services__right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 16px;
+  }
+  .services__img {
+    margin-left: 8px;
+  }
+
+  .repaired_deviсes {
+    display: flex;
+  }
+  .add_services {
+    display: none;
+  }
+  .repaired_brands {
+    display: flex;
+    order: -1;
+  }
+  .prices_options {
+    display: flex;
+  }
+  .adress_centers {
+    display: flex;
+  }
+  .special_prices {
+    display: flex;
+  }
+  .reviews {
+    display: flex;
+  }
+
+  .about {
+    display: flex;
+    max-width: 100%;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  .about__text {
+    display: flex;
+    float: left;
+    max-width: 506px;
+    height: auto;
+    justify-content: flex-start;
+    align-items: column;
+    flex-wrap: wrap;
+  }
+
+  .about__medium {
+    display: none;
+  }
+  .about__finish {
+    display: flex;
+  }
+  .about_button {
+    display: flex;
+    margin: 0 0 10px 5px;
+  }
+  .about__img {
+    display: flex;
+    float: right;
+    height: auto;
+    /* width: 44%; */
+    margin: 0 16px 16px 16px;
+    /* overflow: hidden; */
+  }
+  .about__items {
+    border-radius: 6px;
+
+    width: 531px;
+    height: 307px;
+  }
+}
+@media (min-width: 1121px) and (max-width: 2560px) {
+  .menu__icons {
+    display: none;
+  }
+  .menu__items {
+    margin: 10px;
+  }
+
+  .call {
+    display: flex;
+  }
+  .chat {
+    display: flex;
+  }
+  .profile {
+    display: flex;
+  }
+  .services_div {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .services__nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .services__nav:nth-child(2) {
+    justify-content: flex-end;
+  }
+
+  .services__right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 16px;
+  }
+  .services__img {
+    margin-left: 8px;
+  }
+
+  .repaired_deviсes {
+    display: flex;
+  }
+  .add_services {
+    display: none;
+  }
+  .repaired_brands {
+    display: flex;
+    order: -1;
+  }
+  .prices_options {
+    display: flex;
+  }
+  .adress_centers {
+    display: flex;
+  }
+  .special_prices {
+    display: flex;
+  }
+  .reviews {
+    display: flex;
+  }
+
+  .about {
+    display: flex;
+    max-width: 100%;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  .about__text {
+    display: flex;
+    float: left;
+    max-width: 506px;
+    height: auto;
+    justify-content: flex-start;
+    align-items: column;
+    flex-wrap: wrap;
+  }
+
+  .about__medium {
+    display: none;
+  }
+  .about__finish {
+    display: flex;
+  }
+  .about_button {
+    display: flex;
+    margin: 0 0 10px 5px;
+  }
+  .about__img {
+    display: flex;
+    float: right;
+    height: auto;
+    /* width: 44%; */
+    margin: 0 16px 16px 16px;
+    /* overflow: hidden; */
+  }
+  .about__items {
+    border-radius: 6px;
+
+    width: 531px;
+    height: 307px;
   }
 }
