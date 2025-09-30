@@ -9,9 +9,9 @@ body {
 текст и картинку в один див
  */
 
-.custom_font {
+/* .custom_font {
   font-family: "TTLakes";
-}
+} */
 
 /* .custom_font_medium {
   font-family: "TTLakes";
@@ -172,7 +172,7 @@ body {
   color: #1b1c21;
   line-height: 20px;
   letter-spacing: 0.2px;
-  max-width: 288px;
+  width: 50%;
   /* max-height: 90px; */
 }
 
@@ -254,7 +254,7 @@ body {
     display: flex;
     float: left;
     /* width: 312px; */
-    max-width: 50%;
+    width: 50%;
     height: auto;
     justify-content: flex-start;
     align-items: column;
@@ -272,11 +272,11 @@ body {
     margin: 0 10px 32px 5px;
   }
   .about__img {
-    display: flex;
+    /* display: flex; */
     float: right;
     margin: 16px;
     height: auto;
-    max-width: 50%;
+    width: 50%;
 
     /* overflow: hidden; */
   }
