@@ -1,6 +1,6 @@
 body {
   box-sizing: border-box;
-  font-family: "TTLakes";
+  font-family: "TT Lakes";
   font-size: 16px;
   /* margin-right: 10px; */
 }
@@ -10,11 +10,11 @@ body {
  */
 
 /* .custom_font {
-  font-family: "TTLakes";
+  font-family: "TT Lakes";
 } */
 
 /* .custom_font_medium {
-  font-family: "TTLakes";
+  font-family: "TT Lakes";
 } */
 
 .menu {
@@ -33,6 +33,7 @@ body {
   display: flex;
 
   align-items: center;
+  cursor: pointer;
   /* margin: 10px; */
 }
 .menu__items:nth-child(3) {
@@ -91,13 +92,14 @@ body {
   border-right: none;
   border-bottom: none;
   background: none;
-  font-family: "TTLakes";
+  font-family: "TT Lakes";
 }
 
 .services__right {
   background-color: #f8f8f8;
   display: none;
   border: none;
+  cursor: pointer;
 }
 
 .services__wrapper {
@@ -108,22 +110,27 @@ body {
   background-color: #f8f8f8;
   justify-content: flex-start;
   align-items: center;
+
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
 }
 
 .services__button {
   display: flex;
   text-wrap: nowrap;
   color: #7e7e82;
-  font-family: "TTLakes";
+  font-family: "TT Lakes";
   font-size: 16px;
   border: none;
   background: none;
   line-height: 24px;
   letter-spacing: -0.2px;
   font-weight: 500;
-  width: 246px;
+  /* width: 246px; */
   height: 40px;
   padding: 5px 5px 5px 12px;
+  cursor: pointer;
+  width: auto;
 }
 
 .services__button:first-child {
@@ -166,13 +173,13 @@ body {
 }
 
 .about__text {
-  font-family: "TTLakes";
+  font-family: "TT Lakes";
   font-size: 14px;
   font-weight: 400;
   color: #1b1c21;
   line-height: 20px;
   letter-spacing: 0.2px;
-  width: 50%;
+  /* width: 50%; */
   /* max-height: 90px; */
 }
 
@@ -204,14 +211,15 @@ body {
   background: #f8f8f8;
   margin: 0 0 10px 5px;
   padding: 10px;
+  cursor: pointer;
 }
 
 .about__img {
-  margin: 0 16px 16px 26px;
+  margin: 0 0 30px 0;
 }
 
 .about__items {
-  /* max-height: 240px; */
+  width: 100%;
 }
 
 @media (min-width: 430px) and (max-width: 768px) {
@@ -233,6 +241,11 @@ body {
   }
   .profile {
     display: flex;
+  }
+
+  .services__wrapper {
+    overflow-x: auto;
+    scrollbar-width: none; /* Firefox */
   }
 
   .prices_options {
@@ -305,6 +318,11 @@ body {
   .profile {
     display: flex;
   }
+  .services__wrapper {
+    overflow-x: auto;
+    scrollbar-width: none; /* Firefox */
+  }
+
   .services_div {
     display: flex;
     flex-direction: row;
@@ -416,8 +434,12 @@ body {
   }
 
   .services__nav {
+  }
+
+  .services__nav {
     display: flex;
     justify-content: space-between;
+    /* cursor: pointer; */
   }
 
   .services__nav:nth-child(2) {
@@ -488,7 +510,7 @@ body {
     float: right;
     height: auto;
     /* width: 44%; */
-    margin: 0 16px 16px 16px;
+    margin: 0 16px 30px 16px;
     /* overflow: hidden; */
   }
   .about__items {
